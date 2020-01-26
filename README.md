@@ -25,4 +25,8 @@
   - _Clean_ maneja la limpieza del proyecto.
   - _Site_ maneja la creación de la documentación del sitio de su proyecto.
 * Para qué sirven los plugins
+
+  Maven es un marco de ejecucion de plugins, todo el trabajo se realiza bajo la ejecucion de plugins. Sirven para ejecutar nuestros proyectos 
 * Qué es y para qué sirve el repositorio central de maven
+
+  El repositorio central de maven es una herramienta que nos permite conocer, multiples elementos, artefactos, plugins, dependencias, herramientas de construccion, informacion acerca de maven, integracion de bases de datos, despliegue JSON. Nos sirve como medio de documentacion para el uso de diferentes herramientas. 
