@@ -26,7 +26,12 @@
   - _Site_ maneja la creación de la documentación del sitio de su proyecto.
 * Para qué sirven los plugins
 
-  Maven es un marco de ejecucion de plugins, todo el trabajo se realiza bajo la ejecucion de plugins. Sirven para ejecutar nuestros proyectos 
+  Maven es un marco de ejecucion de plugins, todo el trabajo se realiza bajo la ejecucion de plugins. Sirven para ejecutar nuestros proyectos. Los plugins son donde se realiza gran parte de la acción real, los plugins se utilizan para: crear archivos jar, crear archivos war, compilar código, código de prueba de unidad, crear documentación del proyecto, y así sucesivamente. Casi cualquier acción que se te ocurra realizar en un proyecto se implementa como un plugins de Maven.
 * Qué es y para qué sirve el repositorio central de maven
 
   El repositorio central de maven es una herramienta que nos permite conocer, multiples elementos, artefactos, plugins, dependencias, herramientas de construccion, informacion acerca de maven, integracion de bases de datos, despliegue JSON. Nos sirve como medio de documentacion para el uso de diferentes herramientas. 
+
+## Crear un proyecto con Maven
+
+Para crear un proyecto en maven usamos el siguiente comando: 
+![](C:\Users\danie\OneDrive\Escritorio\CVDS\proyecto.JPG)
