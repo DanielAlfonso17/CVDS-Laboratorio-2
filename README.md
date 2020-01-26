@@ -34,4 +34,56 @@
 ## Crear un proyecto con Maven
 
 Para crear un proyecto en maven usamos el siguiente comando: 
-![](C:\Users\danie\OneDrive\Escritorio\CVDS\proyecto.JPG)
+
+_mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=Patterns -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false_
+
+Para compilar nuestro proyecto usamos el comando: 
+
+_mvn package_ o _mvn -U package_
+
+Para ejecutar nuestro proyecto usamos el comando:
+
+_mvn exec:java -Dexec.mainClass="edu.eci.cvds.patterns.shapes.ShapeMain" -Dexec.args="Quadrilateral"_
+
+Codigo de implementacion ShapeFactory.java: 
+
+```package edu.eci.cvds.patterns.shapes;
+import edu.eci.cvds.patterns.shapes.concrete.*;
+public class ShapeFactory {
+    public static Shape create(RegularShapeType shapeType) {
+		Shape figura; 
+		switch(shapeType){
+			case Triangle:
+				figura = new Triangle();
+				break;
+				
+			case Pentagon:
+				figura = new Pentagon();
+				break;
+				
+			case Hexagon:
+				figura = new  Hexagon();
+				break;
+				
+			case Quadrilateral:
+				figura = new  Quadrilateral();
+				break;
+				
+			default: 
+				figura = null;
+				break;
+		}
+		return figura;
+    }
+}
+```
+- ¿Cuál(es) de las anteriores instrucciones se ejecutan y funcionan correctamente y por qué?
+    * Sin parámetros: El resultado de la ejecucion es: Parameter of type RegularShapeType is required.
+    
+    * Parámetro: qwerty: El resultado de la ejecucion es : Parameter 'qwerty' is not a valid RegularShapeType
+    
+    * Parámetro: pentagon: El resultado de la ejecucion es: Parameter 'pentagon' is not a valid RegularShapeType
+    
+    * Parámetro Hexagon: El resultado de la ejecucion es:  Successfully created a Hexagon with 6 sides.
+    
+- Gitignore: Sirve para decirle a Git qué archivos o directorios completos debe ignorar y no subir al repositorio de código, no todos los archivos y carpetas son necesarios de gestionar a partir del sistema de control de versiones. Hay código que no necesitas enviar a Git, ya sea porque sea privado para un desarrollador en concreto y no lo necesiten (o lo deban) conocer el resto de las personas.
